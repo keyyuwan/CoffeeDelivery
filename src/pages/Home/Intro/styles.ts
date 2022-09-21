@@ -4,7 +4,9 @@ interface IconWrapperProps {
   backgroundColor: string;
 }
 
-export const HomeContainer = styled.section`
+export const IntroContainer = styled.section`
+  padding: 80px 0 108px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,12 +17,14 @@ export const Content = styled.div``;
 export const Title = styled.strong`
   font: 800 3rem "Baloo 2", sans-serif;
   line-height: 62.4px;
+  color: ${({ theme }) => theme.colors.base.title};
 `;
 
 export const Subtitle = styled.p`
   margin-top: 1rem;
   font-size: 1.25rem;
   line-height: 26px;
+  color: ${({ theme }) => theme.colors.base.subtitle};
 `;
 
 export const Benefits = styled.div`
@@ -28,11 +32,16 @@ export const Benefits = styled.div`
 
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 20px;
 
   .wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    span {
+      color: ${({ theme }) => theme.colors.base.text};
+    }
   }
 `;
 
